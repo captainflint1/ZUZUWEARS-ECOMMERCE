@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuzwears - Cart</title>
+  <link rel="stylesheet" href="cart.css">
+  <script src="./cart.js" defer></script>
+</head>
+<body>
+  <div class="navbar">
+    <nav class="main-nav">
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+
+  <div class="cart-container">
+    <h1>Your Shopping Cart</h1>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Cart items will be dynamically injected here -->
+      </tbody>
+    </table>
+
+    <div class="cart-total">
+      <h3>Total: <span id="total-price">0.00</span> USD</h3>
+    </div>
+
+    <button id="checkout-btn">Checkout</button>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+</html>

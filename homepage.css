@@ -1,0 +1,418 @@
+body {
+    text-align: center;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.first-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background-color: black;
+    border: 1px solid rgb(252, 251, 251);
+    height: 60px;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;  /* This centers the items horizontally */
+    align-items: center;      /* This vertically centers the items */
+    width: 100%;              /* Full width of the container */
+    background-color: #000000;   /* Optional: to give the navbar a background */
+    position: relative;       /* Change from absolute to relative */
+    border-bottom: 2px solid black; /* Border at the bottom (optional) */
+    padding: 10px 0;
+}
+.in-nav{
+    
+        text-decoration: none;
+        color: rgb(255, 247, 247);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;          /* You can adjust this size based on your preference */
+        padding: 10px;            /* Add some padding around the links */
+        transition: color 0.3s;   /* Optional: smooth color transition on hover */
+ 
+}
+.in-nav:last-child{
+    border: none;
+}
+.in-nav:hover{
+    color: rgb(179, 211, 21);}
+    
+.main-nav{
+    display: flex;
+    justify-content: center;  /* Ensures the links are centered inside the navbar */
+    gap: 20px;                /* Space between the links */
+}
+      
+
+      .navbar > ul > li {
+        display: inline;
+      }
+      
+      .navbar > ul > li > a {
+        text-decoration: none;
+      }      
+      
+    
+    
+    
+    /* Optional: Add animation to make it more visually appealing */
+    @keyframes fade {
+        from { opacity: 0.5; }
+        to { opacity: 1; }
+    }
+    
+
+
+.namelogo{
+    font-size: 36px;  /* Adjust the size if needed */
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    color: rgb(11, 2, 2);
+    position: relative;
+    z-index: 20;
+    margin: 20px 0; /* Adjust as needed to create space above */
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+.banner{font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 80px;
+   
+}
+/* Styling the banner */
+#banner {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 2s ease-in-out, opacity 2s;
+    position: relative; /* For overlay and text positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay to improve text visibility */
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Banner text styling */
+#banner h1, #banner p {
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Makes text pop */
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+
+#banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#banner p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.new-arrivals {
+    font-family: 'Montserrat', sans-serif;  /* Clean, modern font */
+    font-weight: 700;                      /* Slightly lighter weight for a more elegant feel */
+    font-style: normal;                     /* Normal style for readability */
+    font-size: 50px;                        /* Increase font size for impact */
+    z-index: 10;                            /* Keep the z-index for layering */
+    color: rgb(20, 20, 20);                 /* Dark, almost black color for strong contrast */
+    text-align: center;                     /* Center align the text */                      /* Add spacing from the top or previous elements */
+    letter-spacing: 1.5px;                  /* Slightly increase letter spacing for clarity */
+    line-height: 1.4;                       /* Adjust line height for readability */
+    text-transform: uppercase;              /* Make text uppercase for added emphasis */
+    position: relative;
+    padding: 0 20px;                        /* Add some padding for responsiveness */
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;  /* Add space between the products */
+    padding: 20px;
+    height: 430px;
+    width: 100%;
+    border: 1px solid #ccc;  /* Optional: Add border for the entire products container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Styling for individual product cards */
+.pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(170, 164, 164);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    transition: transform 0.3s ease-in-out;  /* Smooth scaling on hover */
+}
+
+/* Hover effect for product cards */
+.pro:hover {
+    transform: scale(1.05);  /* Slightly enlarge the product card */
+}
+
+/* Styling for product image */
+.product-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Product title and price styling */
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Mobile-first responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* More responsive layout for smaller screens */
+        gap: 15px;
+    }
+
+    .pro {
+        padding: 0.5rem;  /* Less padding on smaller devices */
+    }
+
+    .product-title {
+        font-size: 1rem;  /* Adjust title size */
+    }
+
+    .product-price {
+        font-size: 0.9rem;  /* Adjust price size */
+    }
+}
+
+/* For very small screens like mobile phones */
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;  /* Single column on very small screens */
+        gap: 10px;
+    }
+
+    .pro {
+        padding: 0.5rem;  /* Keep padding minimal on small screens */
+    }
+
+    .product-title {
+        font-size: 0.9rem;  /* Adjust title size for small screens */
+    }
+
+    .product-price {
+        font-size: 0.8rem;  /* Adjust price size for small screens */
+    }
+}
+
+
+
+.footer{
+    height: 200px;
+    border: 2px solid black;
+    
+    
+}
+
+
+  
+ 
+  
+  
+  .welcome{
+    z-index: 10000;
+    color: rgb(255, 255, 255);
+  }
+  
+
+ 
+  
+  .view{
+    padding: 20px;
+   
+    color:rgb(0, 85, 241);
+  }
+
+/*footer
+/* Basic footer styling */
+.footer {
+    background-color: #2c2c2c; /* Dark background */
+    color: rgb(255, 255, 255);              /* White text for contrast */
+    padding: 40px 20px;        /* Add padding around the footer */
+    text-align: center;        /* Center align text and icons */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribute sections */
+    max-width: 1200px;              /* Limit the width */
+    margin: 0 auto;                /* Center it in the container */
+    flex-wrap: wrap;               /* Wrap content on smaller screens */
+}
+
+.footer-logo {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-size: 2rem;               /* Larger title font */
+    font-weight: bold;
+}
+
+.footer-logo .hh {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Footer Links Section */
+.footer-links {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-links h3 {
+    font-size: 1.25rem;             /* Slightly larger heading */
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;              /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;            /* Space between list items */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: rgb(151, 143, 143);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fffb00;                /* Slight hover effect */
+}
+
+/* Footer Contact Section */
+.footer-contact {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-contact h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #00c8ff;               /* Light blue for links */
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer-social {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-social h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    margin: 0 10px;               /* Space between icons */
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 40px;                  /* Set a standard width */
+    height: 40px;                 /* Maintain the same height */
+    object-fit: contain;          /* Ensure the image fits in the box */
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);        /* Enlarge on hover for interactivity */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 0.875rem;
+    background-color: #1d1d1d;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;     /* Stack sections vertically on smaller screens */
+        align-items: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        flex: none;
+        margin-bottom: 20px;
+    }
+
+    .footer-social a {
+        margin: 0 5px;              /* Reduce space between icons on smaller screens */
+    }
+}
